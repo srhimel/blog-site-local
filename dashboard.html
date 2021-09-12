@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Goriber Dashboard</title>
+        <style>
+            input,
+            textarea {
+                width: 70%;
+                margin-bottom: 10px;
+                display: block;
+                padding: 5px 10px;
+            }
+
+            .post-btn {
+                padding: 5px 40px;
+                background: #000;
+                color: #fff;
+            }
+        </style>
+    </head>
+
+    <body onload="checkNotLogin()">
+        <h1>Welcome to dashboard!</h1>
+        <button onclick="logOut()">Log Out</button>
+        <hr>
+        <h2>Add a new Post</h2>
+        <br>
+        <input type="text" placeholder="Post Title" id="post-title">
+        <textarea name="" id="post-info" cols="30" rows="10"></textarea>
+        <input type="hidden" id="datePicker">
+        <button class="post-btn" onclick="createPost()">Add Post</button>
+        <h2>Previously Added posts</h2>
+        <ol id="post-list"></ol>
+        <script src="app.js"></script>
+    </body>
+
+</html>
